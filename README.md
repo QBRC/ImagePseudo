@@ -50,14 +50,12 @@ You can install them to your conda environment by
 pip install requirement.txt
 </pre>
 
-* gcc
 * openslide
 * igraph
 * leidenalg
 
 Your can install them into your conda environment by
 <pre>
-conda install -c conda-forge gcc
 conda install -c conda-forge openslide
 conda install -c conda-forge python-igraph
 conda install -c conda-forge leidenalg
@@ -75,7 +73,6 @@ You can skip the installation of conda if already installed
 conda create --name imagepseudo python=3.9
 conda activate imagepseudo
 pip install -r requirement.txt
-conda install -c conda-forge gcc
 conda install -c conda-forge openslide
 conda install -c conda-forge python-igraph
 conda install -c conda-forge leidenalg
