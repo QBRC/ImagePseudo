@@ -27,8 +27,6 @@ An AI-powered approach transforms routine pathology slides into dynamic maps of 
 
 ## Dependencies
 
-* Python >= 3.9 (Here we use Python 3.9 for conda environment)
-
 * numpy==1.26.4
 * pandas==2.2.1
 * torch
@@ -36,7 +34,8 @@ An AI-powered approach transforms routine pathology slides into dynamic maps of 
 * transformers==4.38.2
 * scanpy==1.9.8
 * opencv-python==4.9.0.80
-* openslide-python==1.3.1
+* openslide-python
+* openslide-bin
 * lifelines==0.28.0
 * scikit-learn==1.4.1
 * scikit-image==0.22.0
@@ -51,17 +50,17 @@ You can install them to your conda environment by
 pip install requirement.txt
 </pre>
 
+* gcc
 * openslide
 * igraph
 * leidenalg
-* gcc
 
 Your can install them into your conda environment by
 <pre>
+conda install -c conda-forge gcc
 conda install -c conda-forge openslide
 conda install -c conda-forge python-igraph
 conda install -c conda-forge leidenalg
-conda install -c conda-forge gcc
 </pre>
 
 
@@ -76,10 +75,10 @@ You can skip the installation of conda if already installed
 conda create --name imagepseudo python=3.9
 conda activate imagepseudo
 pip install -r requirement.txt
+conda install -c conda-forge gcc
 conda install -c conda-forge openslide
 conda install -c conda-forge python-igraph
 conda install -c conda-forge leidenalg
-conda install -c conda-forge gcc
 </pre>
 
 ## Download pretrained model and example pathology images in svs format
@@ -157,6 +156,8 @@ The code will scan the folder 'pseudotime' to deal with all h5ad files
 **Output File**
 
 - [results.csv](./example_result/results.csv)
+
+### TroubleShooting
 
 
 ### License
