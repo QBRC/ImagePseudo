@@ -36,6 +36,7 @@ An AI-powered approach transforms routine pathology slides into dynamic maps of 
 * transformers==4.38.2
 * scanpy==1.9.8
 * opencv-python==4.9.0.80
+* openslide-python==1.3.1
 * lifelines==0.28.0
 * scikit-learn==1.4.1
 * scikit-image==0.22.0
@@ -53,12 +54,14 @@ pip install requirement.txt
 * openslide
 * igraph
 * leidenalg
+* gcc
 
 Your can install them into your conda environment by
 <pre>
 conda install -c conda-forge openslide
 conda install -c conda-forge python-igraph
 conda install -c conda-forge leidenalg
+conda install -c conda-forge gcc
 </pre>
 
 
