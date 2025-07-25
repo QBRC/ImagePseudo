@@ -27,6 +27,8 @@ An AI-powered approach transforms routine pathology slides into dynamic maps of 
 
 ## Dependencies
 
+* Python >= 3.9 (Here we use Python 3.9 for conda environment)
+
 * numpy==1.26.4
 * pandas==2.2.1
 * torch
