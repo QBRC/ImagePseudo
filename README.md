@@ -79,6 +79,7 @@ pip install -r requirement.txt
 conda install -c conda-forge openslide
 conda install -c conda-forge python-igraph
 conda install -c conda-forge leidenalg
+conda install -c conda-forge gcc
 </pre>
 
 ## Download pretrained model and example pathology images in svs format
