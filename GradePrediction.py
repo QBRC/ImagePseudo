@@ -94,8 +94,8 @@ def extract_feature_from_WSI(input_dir, slide_id,model, out_dir,STEP_SIZE=400,PA
             mask = skimage.transform.resize(mask, (n_rows, n_cols), order=0, preserve_range=True)
         
         
-        for n_row in tqdm(range(int(n_rows/6))):
-            for n_col in range(int(n_cols/6)):
+        for n_row in tqdm(range(int(n_rows))):
+            for n_col in range(int(n_cols)):
                 
                 if mask is None:
                     coord_x = feature_df['coordinate_x']
