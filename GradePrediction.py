@@ -163,7 +163,7 @@ def extract_feature_from_WSI(input_dir, slide_id,model, out_dir,STEP_SIZE=400,PA
 def main(args):
     if args.data_path is not None:
         if os.path.isdir(args.data_path):
-            slide_files = [_ for _ in os.listdir(args.data_path) if not _.startswith('.') and _.endswith('.svs')]
+            slide_files = [_ for _ in os.listdir(args.data_path) if not _.startswith('.') and (_.endswith(".svs") or _.endswith(".tif") or _.endswith(".tiff") or _.endswith(".dicom") or _.endswith(".ndpi"))]
         else:
             slide_files = [args.data_path]
 
@@ -183,7 +183,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run Feature Extraction by phikon')
 
     parser.add_argument('--data_path', default=os.path.join(os.getcwd(), 'example_data/'), type=str,
-                        help="input image file path or folder path containing image files")
+                        help="single image file path or a folder path containing image files, support svs, tiff, tif, dicom, and ndpi")
     parser.add_argument('--model', default=os.path.join(os.getcwd(), 'model/'), type=str, help="model")
     parser.add_argument('--pixel_step', default=400, type=int, help='pixel step for patch extraction')
     parser.add_argument('--output_path', default=os.path.join(os.getcwd(), 'output/'), type=str,
