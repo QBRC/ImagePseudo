@@ -26,7 +26,8 @@ CLASSES = {"G1",
            "other"
            }
 N_CLASSES = 5
-CLASSES_NAMES = ["G1", "G2", "G3", "G4", "other"] #Predicted label: G1:0 G2:1: G3:2 G4:3 other:4 
+CLASSES_NAMES = ["G1", "G2", "G3", "G4", "other"] #Predicted label: G1:0 G2:1: G3:2 G4:3 other:4
+PATCH_SIZE_EXTRACT = 224
 
 #### Set colors for tumor grades ####
 norm = mpl.colors.Normalize(vmin=0, vmax=3)
