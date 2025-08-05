@@ -25,6 +25,18 @@ An AI-powered approach transforms routine pathology slides into dynamic maps of 
 * Estimating pseudotime from extracted features
 * Inference tumor growth speed, diversity and tumor progression fitness
 
+## The support pathology image type
+
+The pathology image types as input.
+
+- svs
+- tif
+- tiff
+- dicom
+- ndpi
+
+You can put the pathology image files into one folder. Use the folder path as the input for this project.
+
 ## Dependencies
 
 * numpy==1.26.4
@@ -108,7 +120,7 @@ Input Parameters:
 
 | Parameter | Description | Default Value |
 | --------- | ----------- | ------------ |
-| data_path | the folder containg the SVS files | |
+| data_path | single image file path or a folder path containing image files, support svs, tiff, tif, dicom, and ndpi | |
 | model | the path of mdoel file 'model.pt' | |
 | pixel_step | pixel step for patch extraction | 400 |
 | output_path | the relative path to output the feature | |
