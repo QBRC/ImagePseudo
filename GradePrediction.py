@@ -73,7 +73,7 @@ class MyModel(nn.Module):
 
         return out
  
-def extract_feature_from_WSI(input_dir, slide_id,model, out_dir,STEP_SIZE=400,PATCH_SIZE=224,):
+def extract_feature_from_WSI(input_dir, slide_id,model, out_dir,STEP_SIZE=400,PATCH_SIZE=224):
     try:
         
         mask = None
@@ -177,7 +177,7 @@ def main(args):
     
     for f in slide_files:
         print(f)
-        extract_feature_from_WSI(args.data_path, f, model, args.output_path,STEP_SIZE=400,PATCH_SIZE=224,)
+        extract_feature_from_WSI(args.data_path, f, model, args.output_path, args.pixel_step, PATCH_SIZE=224)
     
 
 if __name__ == "__main__":
