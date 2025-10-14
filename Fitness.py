@@ -52,7 +52,7 @@ def main(args):
     
     for f in input_files:
         print(f)
-        n_cols, n_rows = int(f.split("_")[1][:-4]), int(f.split("_")[2].split(".")[0][:-4])
+        n_cols, n_rows = int(f.split("_")[-2][:-4]), int(f.split("_")[-1].split(".")[0][:-4])
         
         adata = ad.read_h5ad(os.path.join(args.input_path,f))
         shannon_index_leiden = entropy(adata.obs['leiden'].value_counts())
